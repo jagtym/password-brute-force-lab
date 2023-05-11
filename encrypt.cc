@@ -8,11 +8,11 @@ int main() {
   std::ofstream file("password.txt");
 
   if (!file.is_open()) {
-    std::cout << "Nie uda�~Bo si�~Y otworzy�~G pliku do zapisu!\n";
+    std::cout << "Nie udało się otworzyć pliku do zapisu!\n";
     return 1;
   }
 
-  std::cout << "Wpisz has�~Bo do zaszyfrowania ;)\n";
+  std::cout << "Wpisz hasło do zaszyfrowania ;)\n";
 
   std::string password;
   std::cin >> password;
