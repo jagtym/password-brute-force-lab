@@ -26,9 +26,9 @@ int main() {
 
         bool done = false;
         while (!done) {
-            std::cout << comb << "   |   ";
+            std::cerr << comb << "   |   ";
             std::string enc = encrypt(comb);
-            std::cout << enc << '\n';
+            std::cerr << enc << '\n';
 
             if (enc == password) {
                 std::cout << comb << std::endl;

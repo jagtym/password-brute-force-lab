@@ -15,7 +15,7 @@ int main() {
     std::string password;
     file >> password;
 
-    const std::string chars = "abcdefghijklmnopqrstuvwxyz";
+    const std::string chars = "0123456789";
 
     for (int len = 1; len <= 10; ++len) {
         std::string comb(len, '0');
