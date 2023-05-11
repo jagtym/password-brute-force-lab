@@ -1,4 +1,14 @@
 LIBS=-lcrypto -lssl
+CXX=g++
 
-g++ -o small_letters_show $(LIBS) small_letters_show.cc
-g++ -o full_show $(LIBS) full_show.cc
+SRCS=$(wildcard *.cc)
+PROGS=$(patsubst %.cc,%,$(SRCS))
+
+all: $(PROGS)
+
+%: %.cc
+	$(CXX) -o $@ $< $(LIBS)
+
+.PHONY: clean
+clean:
+	rm -f $(PROGS)
